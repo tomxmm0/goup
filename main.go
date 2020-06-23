@@ -24,14 +24,11 @@ func GenerateName(extension string) string {
 func UploadHandler(w http.ResponseWriter, req *http.Request) {
 	if req.Method == "POST" {
 		file, handler, err := req.FormFile("file")
+		defer file.Close()
 
 		if err != nil {
-			fmt.Println("Error Retrieving the File")
-			fmt.Println(err)
-			return
+			log.Fatalln("Error retrieving file")
 		}
-
-		defer file.Close()
 
 		data := make([]byte, handler.Size)
 		file.Read(data)
