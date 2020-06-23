@@ -1,0 +1,32 @@
+body {
+    background-color: #e3e3e3;
+}
+
+.container {
+    margin: 50px auto;
+    max-width: 1000px;
+}
+
+.title {
+    font-family: monospace;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.upload {
+    border: white 2px solid;
+    border-style: dashed;
+    width: 75%;
+    margin: 100px auto;
+    padding: 50px;
+}
+
+.upload input[type="file"] {
+    display: block;
+    margin: 20px auto;
+}
+
+.upload input[type="submit"] {
+    display: block;
+    margin: 20px auto;
+}
